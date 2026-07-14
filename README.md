@@ -2,7 +2,7 @@
 
 This is a simple weather application built using HTML, CSS, and JavaScript. It fetches real-time weather data from the OpenWeatherMap API and displays details like temperature, humidity, wind speed, pressure, visibility, sunrise, and sunset.
 
-##Live Demo
+## Live Demo
 https://bhabanadas.github.io/weatherapp/
 
 ## Features
