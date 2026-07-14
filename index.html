@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+
+            <div class="logo">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <h2>WeatherSphere</h2>
+            </div>
+              <button id="themeBtn" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+        </header>
+
+        <!-- Search -->
+        <section class="search-box">
+
+            <form id="searchForm">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search any city..."
+                    autocomplete="off"
+                    required>
+
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </form>
+
+            <button id="locationBtn" class="location-btn">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                Use Current Location
+            </button>
+
+        </section>
+
+        <!-- Error Message -->
+        <p id="errorMsg"></p>
+
+        <!-- Loading -->
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather...</p>
+        </div>
+
+        <!-- Weather Card -->
+        <section id="weatherCard" class="weather-card hidden">
+
+            <div class="top-section">
+
+                <div>
+
+                    <h1 id="cityName">Guwahati</h1>
+
+                    <p id="currentDate">
+                        Monday, 13 July
+                    </p>
+
+                    <p id="weatherDesc">
+                        Clear Sky
+                    </p>
+
+                </div>
+
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="Weather Icon">
+
+            </div>
+
+            <div class="temperature">
+
+                <h2 id="tempDisplay">28°C</h2>
+
+                <p>
+                    Feels Like
+                    <span id="feelsLike">
+                        30°C
+                    </span>
+                </p>
+
+            </div>
+
+            <!-- Weather Details -->
+
+            <div class="details-grid">
+
+                <div class="detail-card">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    <h4>Humidity</h4>
+
+                    <p id="humidityVal">75%</p>
+
+                </div>
+
+                <div class="detail-card">
+
+                    <i class="fa-solid fa-wind"></i>
+
+                    <h4>Wind</h4>
+
+                    <p id="windVal">3 m/s</p>
+
+                </div>
+
+                <div class="detail-card">
+
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                    <h4>Pressure</h4>
+
+                    <p id="pressureVal">1012 hPa</p>
+
+                </div>
+
+                <div class="detail-card">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    <h4>Visibility</h4>
+
+                    <p id="visibilityVal">10 km</p>
+
+                </div>
+
+            </div>
+
+            <!-- Sunrise Sunset -->
+
+            <div class="sun-section">
+
+                <div>
+
+                    <i class="fa-solid fa-sun"></i>
+
+                    <h4>Sunrise</h4>
+
+                    <p id="sunriseVal">05:12 AM</p>
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-moon"></i>
+
+                    <h4>Sunset</h4>
+
+                    <p id="sunsetVal">06:34 PM</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Favourite Cities -->
+
+        <section class="favorites">
+
+            <div class="fav-header">
+
+                <h3>
+                    <i class="fa-solid fa-heart"></i>
+                    Favourite Cities
+                </h3>
+
+                <button id="saveCityBtn">
+                    Save Current
+                </button>
+
+            </div>
+
+            <div id="favoriteCities">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
